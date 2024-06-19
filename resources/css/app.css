@@ -1,0 +1,28 @@
+header{
+    display: flex;
+    flex-direction: row;
+    border: 3px green solid;
+    padding: 2%;
+}
+
+header > h1 {
+    flex: auto;
+  }
+  
+  header > nav {
+    width: 20rem;
+  }
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    float: left;
+    padding: 3%;
+    text-align: center;
+}
+li a{
+    text-decoration: none;
+}
