@@ -4,42 +4,18 @@
 
 @section('blog')
 
-    <article class="blog">
-        <h2>Título</h2>
-        <p>Author: </p>
-    </article>
-    <article class="blog">
-        <h2>Título</h2>
-        <p>Author: </p>
-    </article>
-    <article class="blog">
-        <h2>Título</h2>
-        <p>Author: </p>
-    </article>
-    <article class="blog">
-        <h2>Título</h2>
-        <p>Author: </p>
-    </article>
+    <div id="blog">
+    @foreach ($posts as $post)
+        <article class="blog">
+            <h2><a href="{{ $post->title }}">{{ $post->title }}</a></h2>
+                <br>
+                <p>{{ $post->category }}</p>
+                <!-- <img src="{{ $post->image }}" alt=""> -->
+        </article>     
+    @endforeach
+    </div>
+
+    {{ $posts->links() }}
 
 @endsection
 
-@section('blog')
-
-    <article class="portfolio">
-        <h2>Project</h2>
-        <p>Technologies</p>
-    </article>
-    <article class="portfolio">
-        <h2>Project</h2>
-        <p>Technologies</p>
-    </article>
-    <article class="portfolio">
-        <h2>Project</h2>
-        <p>Technologies</p>
-    </article>
-    <article clasportfolio">
-        <h2>Project</h2>
-        <p>Technologies</p>
-    </article>
-
-@endsection

@@ -2,9 +2,12 @@
 
 namespace Database\Seeders;
 
+use App\Models\Portfolio;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+
+use App\Models\Post;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,5 +22,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+
+        Post::factory(20)->create();
     }
 }
